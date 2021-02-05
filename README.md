@@ -15,7 +15,7 @@ curl -X POST --header 'Content-Type: application/json' --header 'Accept: */*' -d
 curl -X GET --header 'Accept: application/json' 'http://localhost:8181/api/schools/2'
 ```
 
-### Create studet
+### Create student
 
 ```bash
 curl -X POST --header 'Content-Type: application/json' --header 'Accept: */*' -d '{ \ 
@@ -24,7 +24,7 @@ curl -X POST --header 'Content-Type: application/json' --header 'Accept: */*' -d
  }' 'http://localhost:8080/api/students'
 ```
 
-### Get a studet details
+### Get a student details
 
 ```bash
 curl -X GET --header 'Accept: application/json' 'http://localhost:8080/api/students/1'
