@@ -1,9 +1,0 @@
-package com.techm.student.repository;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.techm.student.model.Student;
-
-public interface StudentInterface extends JpaRepository<Student, Long>{
-
-}

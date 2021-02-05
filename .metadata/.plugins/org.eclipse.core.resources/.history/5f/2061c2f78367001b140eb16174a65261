@@ -1,9 +1,0 @@
-package com.techm.student.exception;
-
-public class StudentNotFoundException extends RuntimeException {
-	
-	public StudentNotFoundException(String isbn) {
-        super("could not find book with ISBN: '" + isbn + "'");
-    }
-	
-}

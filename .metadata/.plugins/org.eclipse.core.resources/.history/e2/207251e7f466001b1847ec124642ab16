@@ -1,9 +1,0 @@
-package com.techm.school.repository;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.techm.school.model.School;
-
-public interface SchoolRepository extends JpaRepository<School, Long>{
-
-}
