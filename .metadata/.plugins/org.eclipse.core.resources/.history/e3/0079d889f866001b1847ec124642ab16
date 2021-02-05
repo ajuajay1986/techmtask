@@ -1,0 +1,42 @@
+package com.techm.school.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.techm.school.model.School;
+import com.techm.school.service.SchoolService;
+
+/**
+ * @author achyutananda
+ *
+ */
+@RestController
+@RequestMapping("/api")
+public class SchoolController {
+	
+	@Autowired
+	SchoolService schoolService;
+	
+	@GetMapping("/schools")
+    public List<School> getAllNotes() {
+        return noteRepository.findAll();
+    }
+
+    @PostMapping("/schools")
+    public Note createNote(@Valid @RequestBody Note note) {
+        return noteRepository.save(note);
+    }
+
+    @GetMapping("/notes/{id}")
+    public Note getNoteById(@PathVariable(value = "id") Long noteId) {
+        return noteRepository.findById(noteId)
+                .orElseThrow(() -> new ResourceNotFoundException("Note", "id", noteId));
+    }
+
+}

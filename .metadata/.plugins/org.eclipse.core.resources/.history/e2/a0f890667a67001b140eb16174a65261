@@ -1,0 +1,5 @@
+package com.techm.student.exception;
+
+public class StudentNotFoundException {
+
+}

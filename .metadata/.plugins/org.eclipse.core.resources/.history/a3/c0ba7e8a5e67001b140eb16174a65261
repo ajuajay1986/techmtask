@@ -1,0 +1,34 @@
+package com.techm.student.service;
+
+import java.util.List;
+
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.techm.student.model.Student;
+import com.techm.student.repository.StudentRepository;
+
+public class StudentService {
+	
+	@Autowired
+	StudentRepository studentRepository;
+
+	public List<Student> findAllData() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Student saveData(@Valid Student student) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Student findDataById(Long sId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+
+}

@@ -1,0 +1,32 @@
+package com.techm.school.service;
+
+import java.util.List;
+
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.techm.school.model.School;
+import com.techm.school.repository.SchoolRepository;
+
+@Service
+public class SchoolService {
+	
+	@Autowired
+	SchoolRepository schoolRepository;
+	
+
+	public List<School> findAllData() {
+		return schoolRepository.findAll();
+	}
+
+	public School saveData(School school) {
+		return schoolRepository.save(school);
+	}
+
+	public School findDataById(Long noteId) {
+		return null;
+	}
+
+}
